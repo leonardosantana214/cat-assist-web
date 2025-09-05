@@ -1,0 +1,17 @@
+ /* Estilizando a barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando a trilha da barra de rolagem (o fundo) */
+::-webkit-scrollbar-track {
+    background: black; /* Cor da trilha */
+    border-radius: 6px; /* Pontas arredondadas da trilha */
+}
+
+/* Estilizando o "polegar" (parte que sobe e desce) */
+::-webkit-scrollbar-thumb {
+    background-color: red; /* Cor do polegar */
+    border-radius: 6px; /* Pontas arredondadas do polegar */
+    border: 3px solid black; /* Adiciona um espaçamento ao redor do polegar */
+}

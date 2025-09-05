@@ -1,0 +1,150 @@
+/* Footer Styles */
+.footer {
+  background-color: #000;
+  color: white;
+}
+
+.footer a, .footer p, .footer h5, .footer span {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.5rem;
+}
+
+/* Above and Below Footer Styles */
+.below-footer {
+  background-color: #000;
+  padding: 10px 0;
+}
+
+/* Estilos atualizados para o ícone do menu e texto "SERVIÇOS" */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Hide by default */
+
+}
+
+.menu-toggle .menu-icon {
+  justify-content: space-between;
+  margin-right: -50px; /* Espaço entre ícone e texto */
+  position: relative;
+}
+
+/* Lista de serviços */
+.list-unstyled {
+  margin: 0;
+  flex-direction: column;
+}
+
+.list-unstyled.open {
+  display: flex; /* Mostrar o menu quando aberto */
+}
+
+.copyright{
+  background-color: #000;
+}
+
+/* Responsividade para telas menores que 1000px */
+@media (max-width: 757px) {
+  #container-footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-toggle {
+    display: flex; /* Exibir o botão de toggle em telas menores */
+    justify-content: center;
+  }
+
+  .list-unstyled {
+    display: none; /* Ocultar menu por padrão */
+  }
+
+  .list-unstyled.open {
+    display: flex; /* Mostrar o menu quando aberto */
+  }
+
+  .services-menu ul li a {
+    padding: 10px 0; /* Melhorar o alvo de toque em dispositivos móveis */
+  }
+
+  .below-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+}
+/* Ensure the services menu is always visible on larger screens */
+@media (min-width: 758px) {
+  .list-unstyled {
+    display: flex; /* Ensure it's always visible */
+  }
+}
+
+/* Hamburger Icon Animation */
+.menu-icon {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-icon span {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+  top: 20px;
+}
+
+/* Animação quando o menu está aberto */
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* Redline (Electricity Animation) */
+.redline {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #ff0000;
+}

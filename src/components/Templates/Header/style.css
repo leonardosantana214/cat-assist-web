@@ -1,0 +1,119 @@
+/* Header */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+/* /* src/components/Header.css */
+.custom-navbar {
+  background-color: #000;
+  border-bottom: 3px solid red;
+  display: flex;
+  padding: 10px;
+}
+
+.navbar-logo {
+  width: 150px;
+}
+
+.sesi-logo {
+  height: 40px;
+}
+
+#nav-left-right {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-evenly;
+}
+
+.nav-link span {
+  color: #fff;
+  transition: color 0.3s ease;
+  transition: 1s;
+}
+
+.nav-link span:hover {
+  color: red !important;
+  transition: 1s;
+}
+
+/* Estilo para o dropdown do botão de hambúrguer */
+.hamburger-dropdown .hamburger-toggle {
+  font-size: 1.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.custom-dropdown-menu .dropdown-item {
+  color: #fff;
+  background-color: #000;
+  transition: .3s ease-in-out;
+  font-weight: 300;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+  color: red;
+  background-color: #000;
+}
+
+#dropdown-menu {
+  padding: 0;
+}
+
+/* Para esconder a navegação em telas menores */
+@media (max-width: 880px) {
+  #nav-left-right .nav-link {
+    display: none;
+  }
+
+  #nav-left-right {
+    display: block;
+  }
+
+  .custom-navbar {
+    display: flex;
+  }
+
+  .hamburger-dropdown {
+    order: 2;
+
+  }
+
+}
+
+@media (min-width: 880px) {
+  .hamburger-dropdown {
+    display: none;
+    /* Esconde o dropdown em telas grandes */
+  }
+
+
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 7px;
+  /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  /* Cor do fundo da barra */
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  /* Cor da parte deslizante */
+  border-radius: 10px;
+  /* Borda arredondada */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+  /* Cor ao passar o mouse */
+}

@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('./.././../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+  }
+
+
+.container-fluid{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.left-container{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to left, transparent 0%, black 100%);
+    mask-size: cover;
+    
+}
+
+.left-img{
+    height: 70%;
+    width: 100%;
+}
+
+.redfilter{
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    background: linear-gradient(to right, #BF0B3B, #fff);
+    position: absolute;
+}
+
+.right-container{
+    font-family: 'Raleway';
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+}
+.right-container h3{
+    text-align: center;
+    color: #000;
+}
+
+.starsContainer {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: none;
+}
+
+.text-suggestion{
+    font-size: 16px;
+    color: #000;
+}
+
+.right-container textarea{
+    height: 250px;
+    width: 650px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    padding:20px;
+    border: none;
+}
+
+.right-container textarea::placeholder{
+    color: #4e4e4e;
+}
+
+.right-container textarea:focus{
+    outline: none;
+}
+
+.right-container button{
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    color: #4e4e4e;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    transition: .3s ease;
+    font-size: 16px;
+}
+
+.right-container button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width:950px){
+
+    .container-fluid{
+        width: 100%;
+        padding: 50px 20px;
+        margin: 0;
+    }
+
+    #container-rating{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .left-container{
+        display: none;
+    }
+
+    .right-container{
+        max-width: 100%;
+        width: min-content;
+        padding: 5px;
+    }
+
+    .right-container textarea{
+        width: 100%;
+    }
+
+    #thanks-message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        text-align: start;
+    }
+
+    #thanks-message p{
+        text-align: center;
+    }
+
+    .right-container textarea{
+        width: 100%;
+    }
+
+    .starsContainer{
+        width: 100%;
+    }
+}

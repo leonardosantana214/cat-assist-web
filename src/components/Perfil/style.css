@@ -1,0 +1,129 @@
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-background {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.perfil-fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../../assets/perfil-images/background-pista-atletismo.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  /* Garanta que o container principal esteja acima do filtro */
+  background-attachment: fixed;
+}
+
+/* LAYOUT DESKTOP */
+
+.perfil-container {
+  background: rgba(183, 183, 183, 0.42);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 350px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  /* Efeito de desfoque nas bordas */
+}
+
+.perfil-header {
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.perfil-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.perfil-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.perfil-label,
+.perfil-value {
+  font-size: 16px;
+  color: #fff;
+}
+
+.perfil-label {
+  font-weight: 500;
+}
+
+.perfil-value {
+  margin-left: 10px;
+}
+
+.perfil-button {
+  background-color: #bf0b3b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  /* Garante que o cursor de clique funcione */
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.perfil-button:hover {
+  background-color: #c40813;
+}
+
+/* Layout responsivo: o header do perfil fica em cima do content */
+@media (min-width: 481px) and (max-width: 900px) {
+
+  .perfil-image {
+    margin-bottom: 20px;
+  }
+
+  .perfil-container {
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .perfil-button {
+    width: 100%;
+    /* Largura total no mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .perfil-image {
+    margin-top: -20%;
+  }
+
+  .perfil-label,
+  .perfil-value,
+  .perfil-button {
+    font-size: 14px;
+  }
+
+  .perfil-button {
+    width: 100%;
+  }
+}

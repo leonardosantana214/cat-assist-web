@@ -1,0 +1,319 @@
+:root {
+  --sesi-red: #bf0b3b;
+  --sesi-black: #000000;
+  --sesi-white: #ffffff;
+  --primary-color: #ff4081;
+  /* Rosa vibrante para botões e destaques */
+  --secondary-color: #ffffff;
+  /* Branco para textos e fundos */
+  --background-color: #121212;
+  /* Fundo escuro */
+  --text-color: #f5f5f5;
+  /* Texto claro */
+  --hover-color: #ff80ab;
+  /* Cor de hover para botões */
+}
+
+body {
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.icone-do-bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: var(--sesi-red);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.icone-do-bot img {
+  width: 220px;
+  height: max-content;
+  border-radius: 50%;
+}
+
+#slide-button {
+  margin-bottom: 40px;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  font-size: 3vw;
+}
+
+.slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.carousel {
+  height: auto;
+  background-color: var(--background-color);
+  aspect-ratio: 16 / 9;
+}
+
+.container-geral h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+.container-geral h2 {
+  font-size: 42px;
+  font-weight: bolder;
+}
+
+.container-geral h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.container-geral p {
+  text-align: justify;
+}
+
+.container-geral li {
+  text-align: start;
+}
+
+.animate__animated {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+
+.texto-banner {
+  display: flex;
+}
+
+.botao {
+  text-decoration: none;
+  padding: 20px 60px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  font-size: 24px;
+}
+
+.botao-rosa {
+  background-color: var(--sesi-red);
+  color: var(--sesi-white);
+  
+}
+
+.botao-rosa:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.botao-preto {
+  background-color: var(--sesi-black);
+  color: var(--sesi-white);
+}
+
+.botao-preto:hover {
+  color: #f5f5f5;
+  background-color: #bf0b3b;
+}
+
+/* PERGUNTAS FREQUENTES */
+
+.perguntas-frequentes {
+  width: 90%;
+  margin-bottom: 120px;
+  margin-top: 120px;
+  color: #000;
+}
+
+.perguntas-frequentes h2 {
+  margin-left: 120px;
+}
+
+.container-frequent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frequent-right {
+  width: 50%;
+  text-align: center;
+}
+
+.frequent-left img {
+  height: 450px;
+  width: 450px;
+}
+
+/* ATENDIMENTO */
+#atendimento {
+  display: grid;
+  place-items: center;
+  padding: 80px;
+  background-color: var(--sesi-black);
+  color: var(--sesi-white);
+}
+
+.atendimento-left,
+.atendimento-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+  gap: 20px;
+}
+
+.middle-line {
+  width: 80%;
+  height: 2px;
+  margin: auto;
+  margin-top: 70px;
+  background-color: var(--sesi-white);
+}
+
+/* SOBRE NÓS */
+
+.sobrenos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: #000;
+  margin: 120px;
+}
+
+.About-left,
+.About-right {
+  width: 50%;
+}
+
+.About-left {
+  display: grid;
+  place-items: center;
+  gap: 30px;
+}
+
+/* Slide ativo terá opacidade 1 */
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 757px) {
+
+  /* CONFIG GERAL RESPONSIVA */
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .botao-rosa, .botao-preto{
+    font-size: 15px;
+    padding: 10px 20px;
+    
+  }
+
+  /* BANNER */
+  .banner {
+    height: 150vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* PERGUNTAS FREQUENTES RESPONSIVO */
+  .perguntas-frequentes{
+    width: 100%;
+    position: relative;
+  }
+  .perguntas-frequentes h2 {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .container-frequent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .frequent-left {
+    width: fit-content;
+    margin: 20px;
+  }
+
+  .frequent-left img{
+    width: 100%;
+  }
+
+  .frequent-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 90%;
+  }
+
+  .frequent-quest {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  /* ATENDIMENTO RESPONSIVO */
+  #atendimento{
+    padding: 0;
+  }
+  .container-atendimento{
+    padding: 10px;
+  }
+
+  .middle-line {
+    height: 2px;
+    width: 80%;
+    background-color: var(--sesi-white);
+  }
+
+  /* SOBRE NÓS RESPONSIVO */
+  .sobrenos {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .About-left {
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .About-left h2, .About-left p, .About-left a{
+    width: 100%;
+    margin: 20px;
+  }
+
+  .About-right, .About-right img{
+    width: 100%;
+  }
+  
+  .About-right img{
+    height: fit-content;
+  }
+}
+

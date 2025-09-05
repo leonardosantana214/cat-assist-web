@@ -1,0 +1,235 @@
+/* Container geral do chat */
+#chat-container {
+    padding: 0;
+    margin: 0 auto;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.scroll ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.chat-header {
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #BF0B3B;
+
+}
+
+/* Botão de Envio */
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-area input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.input-area button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+
+}
+
+/* Área de mensagens */
+.messages-box {
+    background-color: #ffffff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+.messages-box::-webkit-scrollbar-thumb {
+    color: transparent;
+}
+
+.message-container {
+    padding: 50px;
+}
+
+.open-chats {
+    display: none;
+}
+
+.chat-box-chat {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+    border-right: 1px solid #66666667;
+  
+}
+
+.d-none {
+    display: none;
+}
+
+.btn-acc {
+    background-color: white;
+    border: none;
+    border-bottom: #66666667 solid 1px;
+    width: 100%;
+    padding: 5px;
+    min-height: 40px;
+    font-size: larger;
+}
+
+.icon {
+    width: 250px;
+    height: 65px;
+    background-color: #000000ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon i {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.icon p {
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+}
+
+.btn-acc:hover, .btn-acc:focus{
+    color: #fff;
+    transition: .5s;
+}
+.btn-acc:hover {
+    background-color: #46464682;
+}
+
+.btn-acc:focus {
+    background-color: #000;
+}
+
+.messages-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-input {
+    display: flex;
+    background-color: #b1b1b16f;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.user-message {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 50%;
+    border-bottom-right-radius: 0;
+}
+
+.message-common {
+    font-size: 17px;
+}
+
+.other-message {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    max-width: 50%;
+    border-bottom-left-radius: 0;
+}
+
+.chat-default {
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.chat-default img {
+    width: 400px;
+    height: fit-content;
+}
+
+.chat-default p {
+    font-size: 24px;
+}
+
+/* Estilos para tela de dispositivos móveis */
+@media (max-width: 900px) {
+    #chat-container {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0vw !important;
+
+    }
+
+    /* Quando a barra de contatos estiver aberta */
+    .chat-box-chat.open {
+        transform: translateX(0);
+    }
+
+    /* Estilos gerais de chat responsivo */
+    .messages-container {
+        padding: 0px;
+        max-height: 96%;
+    }
+
+    .open-chats {
+        display: grid;
+        place-items: center;
+        background-color: red;
+        margin-top: 0px;
+        width: 100%;
+        border: 0px;
+        border-radius: 0;
+        color: white;
+
+    }
+
+    .chat-default img {
+        height: auto;
+    }
+    .chat-box-chat{
+        display: none;
+    }
+}

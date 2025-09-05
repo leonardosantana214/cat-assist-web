@@ -1,0 +1,46 @@
+.perguntas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400;
+  border: 2px black;
+  transition: 1.5s ease;
+  padding: 20px;
+
+}
+
+.card {
+  border-radius: 0.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  gap: 50px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item-action {
+  border: none;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+.list-group-item-action:hover {
+  background-color: #e9ecef;
+}
+
+.collapse.show {
+  display: block;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-center {
+  color: black;
+}
