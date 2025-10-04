@@ -1,4 +1,5 @@
 // Imports de recursos e de components
+import "./App.css";
 
 import Footer from "./components/Templates/Footer";
 import Header from "./components/Templates/Header";
