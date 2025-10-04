@@ -6,7 +6,7 @@ import Header from "./components/Templates/Header";
 import Perfil from "./components/perfil/index";
 import PergFreq from "./components/PergFreq";
 import Home from "./components/home/index";
-import Chat from "./components/chat/index.js";
+import Chat from "./components/Chat/index.js";
 import Avaliacao from "./components/Avaliacao";
 import Sobrenos from "./components/SobreNos";
 import Login from "./components/Login";
